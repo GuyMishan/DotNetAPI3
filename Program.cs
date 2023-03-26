@@ -12,9 +12,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(); // Make sure you call this previous to AddMvc
 builder.Services.AddMvc(option => option.EnableEndpointRouting = false);
 //
-builder.Services.AddDbContext<YourDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-//
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
